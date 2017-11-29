@@ -19,5 +19,13 @@ namespace REST_API_ASP_FULL.Controllers
 
             return carrinho;
         }
+
+        public string Post([FromBody] Carrinho carrinho)
+        {
+            CarrinhoDAO dao = new CarrinhoDAO();
+            dao.Adiciona(carrinho);
+
+            return "ok"; 
+        }
     }
 }

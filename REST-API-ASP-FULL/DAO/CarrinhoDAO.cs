@@ -22,7 +22,7 @@ namespace Loja.DAO
             carrinho.Endereco = "Rua Vergueiro 3185, 8 andar, Sao Paulo";
             carrinho.Id = 1;
             banco.Add(1, carrinho);
-            banco.Add(2, carrinho);
+           
         }
 
         public void Adiciona(Carrinho carrinho)
