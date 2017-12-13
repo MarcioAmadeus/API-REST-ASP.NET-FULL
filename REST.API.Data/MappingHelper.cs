@@ -1,10 +1,10 @@
 ﻿using REST.API.Data.Mappings;
-//using REST.API.Utils;
+using REST.API.Utils;
 using NHibernate.Cfg.MappingSchema;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 using SharpArch.Domain.DomainModel;
-//using SharpArch.NHibernate.Helper;
+using SharpArch.NHibernate.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -62,7 +62,7 @@ namespace REST.API.Data
             mapper.MapAllEnumsToStrings();
 
             List<Type> mappings =
-                Assembly.GetAssembly(typeof(AlunoMap))
+                Assembly.GetAssembly(typeof(UserMap))
                     .GetExportedTypes()
                     .Where(t => t.BaseType.IsGenericType &&
                             (t.BaseType.GetGenericTypeDefinition().Equals(typeof(ClassMapping<>)) ||

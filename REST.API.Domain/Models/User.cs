@@ -1,5 +1,5 @@
 ﻿using REST.API.Utils;
-//using LEGITIM.DISTRIBUIDORA.Utils.SoftDelete;
+using REST.API.Utils.SoftDelete;
 using SharpArch.Domain.DomainModel;
 using System.Collections.Generic;
 
