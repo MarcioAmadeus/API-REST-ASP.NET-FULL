@@ -1,4 +1,3 @@
-C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\ApplicationInsights.config
 C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\roslyn\csc.exe
 C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -14,6 +13,14 @@ C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\roslyn\VB
 C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\REST.API.Utils.dll.config
 C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\REST.API.Utils.dll
 C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\REST.API.Utils.pdb
+C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\NHibernate.dll
+C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\SharpArch.Domain.dll
+C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\SharpArch.NHibernate.dll
+C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\NHibernate.xml
+C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\SharpArch.Domain.pdb
+C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\SharpArch.Domain.xml
+C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\SharpArch.NHibernate.pdb
+C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\bin\SharpArch.NHibernate.xml
+C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\obj\Debug\REST.API.Utils.csprojResolveAssemblyReference.cache
 C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\obj\Debug\REST.API.Utils.dll
 C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\obj\Debug\REST.API.Utils.pdb
-C:\Projetos\ASP.NET-FULL-REST-API\REST-API-ASP-FULL\REST.API.Utils\obj\Debug\REST.API.Utils.csprojResolveAssemblyReference.cache

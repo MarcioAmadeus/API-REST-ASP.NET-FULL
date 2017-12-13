@@ -52,7 +52,7 @@ namespace SharpArch.Domain.PersistenceSupport
             get { return false; }
         }
 
-        public abstract IDbContext DbContext { get; }
+        //public abstract IDbContext DbContext { get; }
 
         public virtual void Clear()
         {
@@ -73,6 +73,22 @@ namespace SharpArch.Domain.PersistenceSupport
         public abstract T SaveOrUpdate(T entity);
         public abstract void Delete(T entity);
         public abstract void Delete(int id);
+
+
+        public void Evict(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public T Save(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ITransactionManager TransactionManager
+        {
+            get { throw new NotImplementedException(); }
+        }
     }
 }
 

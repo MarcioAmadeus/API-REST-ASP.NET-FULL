@@ -10,13 +10,13 @@ namespace SharpArch.NHibernate
 {
     public class NHRepository<T> : BaseRepository<T>
     {
-        public NHRepository() : base(NHibernateSessionHelper.CurrentFor<T>().Query<T>()) { }
+        public NHRepository() : base(new NHibernateSessionFactoryBuilder().BuildSessionFactory().OpenSession().Query<T>()) { }
 
         protected virtual ISession Session
         {
             get
             {
-                return NHibernateSessionHelper.CurrentFor<T>();
+                return new NHibernateSessionFactoryBuilder().BuildSessionFactory().OpenSession();
             }
         }
 
@@ -36,13 +36,13 @@ namespace SharpArch.NHibernate
             }
         }
 
-        public override IDbContext DbContext
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        //public override IDbContext DbContext
+        //{
+        //    get
+        //    {
+        //        throw new NotImplementedException();
+        //    }
+        //}
 
         public override bool Contains(T item)
         {
