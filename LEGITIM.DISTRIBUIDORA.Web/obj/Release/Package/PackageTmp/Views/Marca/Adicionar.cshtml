@@ -1,0 +1,49 @@
+﻿@model  LEGITIM.DISTRIBUIDORA.Web.Models.Marca.MarcaViewModel
+
+@*@section Breadcrumb {
+        <li> Inicio</li>
+        <li>Gerenciar Predios</li>
+        <li>Adicionar</li>
+    }*@
+
+<div id="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <i class="fa fa-lg fa-fw fa-cubes"></i>
+                Adicionar Marca
+            </h1>
+        </div>
+    </div>
+
+    @*@Html.Partial("_Mensagem")*@
+
+    <section id="widget-grid">
+        <div class="row">
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="jarviswidget jarviswidget-color-blueDark" data-widget-editbutton="false" data-widget-deletebutton="false" id="wid-id-0">
+                    <header role="heading">
+                        <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+                        <h2>Marca</h2>
+                    </header>
+                    <div role="content">
+                        <div class="widget-body">
+                            @using (Html.BeginForm("Adicionar", "Marca", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                @Html.Partial("_Form")
+                                <div class="form-actions">
+                                    @Html.ActionLink("Cancelar", "Gerenciar", new
+                               { }, new { @class = "btn btn-default" })
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fa fa-save"></i>
+                                        Salvar
+                                    </button>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>

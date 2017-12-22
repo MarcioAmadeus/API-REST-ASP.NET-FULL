@@ -1,0 +1,159 @@
+﻿@model  LEGITIM.DISTRIBUIDORA.Web.Models.Distribuidor.DistribuidorViewModel
+
+<fieldset>
+    @if (Model.ProdutoViewModel != null && Model.ProdutoViewModel.Count > 0)
+    {
+        for (int i = 0; i < Model.ProdutoViewModel.Count; i++)
+        {
+
+            <tr>
+                <td>
+                    @Html.HiddenFor(model => Model.ProdutoViewModel[i].Descricao)
+                    @Html.DisplayFor(model => Model.ProdutoViewModel[i].Descricao)
+                </td>
+                <td class="valor-compra">
+                    @Html.DisplayFor(model => Model.ProdutoViewModel[i].ValorUnitario, new  {htmlAttributes = new { @class = "form-control valor-compra" } })
+                </td>
+                <td>
+                    @Html.EditorFor(model => Model.ProdutoViewModel[i].EbitdaPer, new { htmlAttributes = new { @class = "form-control EbitdaPer" } })
+                </td>
+                <td>
+                    @Html.EditorFor(model => Model.ProdutoViewModel[i].LiquidoPer, new { htmlAttributes = new { @class = "form-control LiquidoPer" } })
+                </td>
+                <td>
+                    @Html.EditorFor(model => Model.ProdutoViewModel[i].MarkupFin, new { htmlAttributes = new { @class = "form-control MarkupFin" } })
+                </td>
+                <td>
+                    @Html.EditorFor(model => Model.ProdutoViewModel[i].MarkupLiq, new { htmlAttributes = new { @class = "form-control MarkupLiq" } })
+                </td>
+                <td>
+                    @Html.EditorFor(model => Model.ProdutoViewModel[i].ValorDeVenda, new { htmlAttributes = new { @class = "form-control valor-venda" } })
+                </td>
+            </tr>
+        }
+    }
+</fieldset>
+
+<script src="~/Scripts/libs/jquery-2.1.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //var venda = $(".valor-venda")
+        //var trClose2 = venda.closest("tr");
+        //var compra = trClose2.find(".valor-compra").text()
+        //console.log(compra);
+
+        $(".valor-venda").keyup(function (e) {
+            var trClose = $(this).closest("tr");
+            console.log(trClose)
+            var compra = trClose.find(".valor-compra").text()
+            compra = compra.replace(",", ".");
+
+            // Preco de Venda
+            var precoDeVenda = $(this)[0].value
+            precoDeVenda = precoDeVenda.replace(",", ".");
+            // Marckup do Produto
+            var markup = precoDeVenda - compra
+            var markupLiq = precoDeVenda * 0.91 - compra
+            var compra = trClose.find(".MarkupFin")[0].value = markup.toFixed(2);
+            var MarkupLiq = trClose.find(".MarkupLiq")[0].value = markupLiq.toFixed(2);
+            var EbitdaPer = trClose.find(".EbitdaPer")[0].value = (markup / precoDeVenda).toFixed(2);
+            var EbitdaPer = trClose.find(".LiquidoPer")[0].value = (markupLiq / precoDeVenda).toFixed(2);
+            //alert(markup)
+        });
+
+        $(".EbitdaPer").keyup(function (e) {
+            var trClose = $(this).closest("tr");
+            // Preco de Compra
+            var compra = trClose.find(".valor-compra").text()
+            compra = compra.replace(",", ".");
+
+            var porcentagemEBI = $(this)[0].value
+            porcentagemEBI = porcentagemEBI.replace(",", ".");
+            //Preco de venda
+            var precoDeVenda = compra / (1 - porcentagemEBI)
+            trClose.find(".valor-venda")[0].value = precoDeVenda.toFixed(2);
+            // Markup
+            var markup = precoDeVenda - compra
+            trClose.find(".MarkupFin")[0].value = markup.toFixed(2);;
+            // Markup liquido %
+            markupLiq = (precoDeVenda * 0.91 - compra) / precoDeVenda
+            trClose.find(".LiquidoPer")[0].value = markupLiq.toFixed(2);
+            // Markup liquido
+            trClose.find(".MarkupLiq")[0].value = (precoDeVenda * 0.91 - compra).toFixed(2);;
+        });
+
+        $(".LiquidoPer").keyup(function (e) {
+
+            var trClose = $(this).closest("tr");
+            // Preco de Compra
+            var compra = trClose.find(".valor-compra").text()
+            compra = compra.replace(",", ".");
+
+            var porcentagemEBI = ($(this)[0].value);
+            //porcentagemEBI = porcentagemEBI.replace(",", ".");
+           
+            //Preco de venda
+            var precoDeVenda = (compra / (0.91 - porcentagemEBI))
+            trClose.find(".valor-venda")[0].value = precoDeVenda.toFixed(2);
+            // Markup
+            var markup = precoDeVenda - compra
+            trClose.find(".MarkupFin")[0].value = markup.toFixed(2);
+            // Markup  %
+            markupLiq = (precoDeVenda - compra) / precoDeVenda
+            trClose.find(".EbitdaPer")[0].value = markupLiq.toFixed(2);
+            // Markup liquido
+            trClose.find(".MarkupLiq")[0].value = (precoDeVenda * 0.91 - compra).toFixed(2);
+        });
+
+
+
+        $(".MarkupFin").keyup(function (e) {
+            var trClose = $(this).closest("tr");
+            var compra = trClose.find(".valor-compra").text()
+            compra = compra.replace(",", ".");
+            compra = parseFloat(compra);
+
+            var markup = $(this)[0].value
+            markup = markup.replace(",", ".");
+            markup = parseFloat(markup)
+
+            // Preco de Venda
+            var precoDeVenda = markup + compra;
+
+
+
+            trClose.find(".valor-venda")[0].value = precoDeVenda.toFixed(2);
+            // Ebitda %
+            var EbitdaPer = trClose.find(".EbitdaPer")[0].value = (markup / precoDeVenda).toFixed(2);
+            var markupLiq = precoDeVenda * 0.91 - compra
+            var MarkupLiq = trClose.find(".MarkupLiq")[0].value = markupLiq.toFixed(2);
+            var EbitdaPer = trClose.find(".LiquidoPer")[0].value = (markupLiq / precoDeVenda).toFixed(2);
+
+        });
+
+
+        $(".MarkupLiq").keyup(function (e) {
+            var trClose = $(this).closest("tr");
+            var compra = trClose.find(".valor-compra").text()
+            compra = compra.replace(",", ".");
+            compra = parseFloat(compra);
+
+            var markup = $(this)[0].value
+            markup = markup.replace(",", ".");
+            markup = parseFloat(markup)
+
+            // Preco de Venda
+            var precoDeVenda = (markup + compra) / 0.91;
+            var markup = precoDeVenda - compra
+            trClose.find(".valor-venda")[0].value = precoDeVenda.toFixed(2);
+            // Ebitda %
+            var EbitdaPer = trClose.find(".EbitdaPer")[0].value = (markup / precoDeVenda).toFixed(2);
+            var markupLiq = precoDeVenda * 0.91 - compra
+            var EbitdaPer = trClose.find(".LiquidoPer")[0].value = (markupLiq / precoDeVenda).toFixed(2);
+            trClose.find(".MarkupFin")[0].value = markup.toFixed(2);
+
+
+        });
+
+    });
+</script>

@@ -1,0 +1,207 @@
+﻿@model LEGITIM.DISTRIBUIDORA.Web.Models.Home.HomeAlunoViewModel
+
+
+<div>
+
+</div>
+
+<script>
+    var eventoAtual = "@Model.Evento";
+
+</script>
+
+
+<ul class="list-inline steps-container nav nav-tabs">
+    <!-- FOR LOOP -->
+    <li class="steps-content">
+        <a data-toggle="tab" href="#Tema">
+            <div class="well step-ball"></div>
+        </a>
+        <p class="step-description">Tema</p>
+    </li>
+    <li class="steps-content">
+        <a data-toggle="tab" href="#Orientacao">
+            <div class="well step-ball"></div>
+        </a>
+        <p class="step-description">Orientação</p>
+    </li>
+    <li class="steps-content">
+        <a data-toggle="tab" href="#Projeto">
+            <div class="well step-ball"></div>
+        </a>
+        <p class="step-description">Projeto</p>
+    </li>
+    <li class="steps-content">
+        <a data-toggle="tab" href="#Tese_Preliminar">
+            <div class="well step-ball"></div>
+        </a>
+        <p class="step-description">Versão preliminar do trabalho final</p>
+    </li>
+    <li class="steps-content">
+        <a data-toggle="tab" href="#Banca">
+            <div class="well step-ball"></div>
+        </a>
+        <p class="step-description">Banca</p>
+    </li>
+    <li class="steps-content">
+        <a data-toggle="tab" href="#Tese_Final">
+            <div class="well step-ball"></div>
+        </a>
+        <p class="step-description" data-toggle="tab" href="#Tese Final">Trabalho final</p>
+    </li>
+</ul>
+<h4 class="text-center">Ações</h4>
+<div class="well tab-content steps-history">
+    <!-- FOR LOOP -->
+    <div id="Tema" class="tab-pane fade">
+        <ul>
+
+            @foreach (var item in Model.HistoricoTema)
+            {
+                if (item.Link == true)
+                {
+
+                    <li class="action-icon"><a href=@item.Texto> Cadastrar tema</a></li>
+                }
+                else
+                {
+                    <li class="@item.icone"> @item.Texto</li>
+                }
+            }
+
+        </ul>
+    </div>
+    <div id="Orientacao" class="tab-pane fade">
+        @{
+            var i = 0;
+        }
+        <ul>
+            @foreach (var itemOrientacao in Model.HistoricoOriantecao)
+            {
+                if (itemOrientacao.Link == true)
+                {
+
+                    <li class="action-icon"><a href=@itemOrientacao.Texto> Cadastrar tema</a></li>
+                }
+                else
+                {
+                    <li class="@itemOrientacao.icone"> @itemOrientacao.Texto</li>
+                }
+            }
+        </ul>
+    </div>
+    <div id="Projeto" class="tab-pane fade">
+        <ul>
+            @if (Model.HistoricoProjeto != null && Model.HistoricoProjeto.Count > 0)
+            {
+                foreach (var itemProjeto in Model.HistoricoProjeto)
+                {
+                    @*if (itemProjeto.Link == true && itemProjeto.first == true && itemProjeto.LinkDownload == true)
+                        {
+                            <li class="action-icon"><a href=@itemTesePreliminar.Texto> Download Capa </a></li>
+                        }*@
+            if (itemProjeto.Link == true && itemProjeto.first == true && itemProjeto.LinkDownload == false)
+            {
+                <li class="action-icon">
+                    <a href=@itemProjeto.Texto> Cadastrar Projeto</a>
+                </li>
+            }
+            if (itemProjeto.Link == true && itemProjeto.first == false)
+            {
+                <li class="action-icon"><a href=@itemProjeto.Texto> Reenviar Preliminar </a></li>
+                    }
+                    if (itemProjeto.Link == false && itemProjeto.first == true && itemProjeto.LinkDownload == false)
+                    {
+                        <li class="@itemProjeto.icone"> @itemProjeto.Texto</li>
+                    }
+                }
+            }
+        </ul>
+    </div>
+    <div id="Tese_Preliminar" class="tab-pane fade">
+        <ul>
+            @if (Model.HistoricoTesePreliminar != null && Model.HistoricoTesePreliminar.Count > 0)
+            {
+                foreach (var itemTesePreliminar in Model.HistoricoTesePreliminar)
+                {
+                    if (itemTesePreliminar.Link == true && itemTesePreliminar.first == true && itemTesePreliminar.LinkDownload == true)
+                    {
+                        <li class="download-step-icon"><a href="@Url.Action("download", "Basic", new { name = @itemTesePreliminar.LinkPath, directory = "~/Content/kitSunmissao" })" data-toggle="tooltip" data-placement="top" title="Download"> Kit para submissão de versão preliminar do trabalho final</a></li>
+                    }
+                    if (itemTesePreliminar.Link == true && itemTesePreliminar.first == true && itemTesePreliminar.LinkDownload == false)
+                    {
+                        <li class="action-icon">
+                            <a href=@itemTesePreliminar.Texto> Cadastrar versão preliminar do trabalho final</a>
+                        </li>
+                    }
+                    if (itemTesePreliminar.Link == true && itemTesePreliminar.first == false)
+                    {
+                        <li class="action-icon"><a href=@itemTesePreliminar.Texto> Reenviar versão preliminar do trabalho final </a></li>
+                    }
+                    if (itemTesePreliminar.Link == false && itemTesePreliminar.first == true && itemTesePreliminar.LinkDownload == false)
+                    {
+                        <li class="@itemTesePreliminar.icone"> @itemTesePreliminar.Texto</li>
+                    }
+                }
+            }
+        </ul>
+    </div>
+    <div id="Banca" class="tab-pane fade">
+        <ul>
+            @if (Model.HistoricoBanca != null && Model.HistoricoBanca.Count > 0)
+            {
+                foreach (var itemBanca in Model.HistoricoBanca)
+                {
+                    @*if (itemBanca.Link == true && itemBanca.first == true && itemBanca.LinkDownload == true)
+                        {
+                            <li class="action-icon"><a href=@itemBanca.Texto> Kit para submissão de tese final </a></li>
+                        }*@
+            if (itemBanca.Link == true && itemBanca.first == true && itemBanca.LinkDownload == false)
+            {
+                <li class="action-icon">
+                    <a href=@itemBanca.Texto> Cadastrar Banca</a>
+                </li>
+            }
+            if (itemBanca.Link == true && itemBanca.first == false)
+            {
+                <li class="action-icon"><a href=@itemBanca.Texto> Reenviar Banca </a></li>
+                    }
+                    if (itemBanca.Link == false && itemBanca.first == true && itemBanca.LinkDownload == false)
+                    {
+                        <li class="@itemBanca.icone"> @itemBanca.Texto</li>
+                    }
+                }
+            }
+        </ul>
+    </div>
+    <div id="Tese_Final" class="tab-pane fade">
+        <ul>
+            @if (Model.HistoricoTeseFinal != null && Model.HistoricoTeseFinal.Count > 0)
+            {
+                foreach (var itemTeseFinal in Model.HistoricoTeseFinal)
+                {
+                    if (itemTeseFinal.Link == true && itemTeseFinal.first == true && itemTeseFinal.LinkDownload == true)
+                    {
+                        <li class="download-step-icon"><a href="@Url.Action("download", "Basic", new { name = itemTeseFinal.LinkPath, directory = "~/Content/kitSunmissao" })" data-toggle="tooltip" data-placement="top" title="Download"> Kit para submissão de trabalho final </a></li>
+                    }
+                    if (itemTeseFinal.Link == true && itemTeseFinal.first == true && itemTeseFinal.LinkDownload == false)
+                    {
+                        <li class="action-icon">
+                            <a href=@itemTeseFinal.Texto> Cadastrar trabalho final </a>
+                        </li>
+                    }
+                    if (itemTeseFinal.Link == true && itemTeseFinal.first == false)
+                    {
+                        <li class="action-icon"><a href=@itemTeseFinal.Texto> Reenviar trabalho final</a></li>
+                    }
+                    if (itemTeseFinal.Link == false && itemTeseFinal.first == true && itemTeseFinal.LinkDownload == false)
+                    {
+                        <li class="@itemTeseFinal.icone"> @itemTeseFinal.Texto</li>
+                    }
+                }
+            }
+        </ul>
+    </div>
+</div>
+
+<script src="~/Scripts/Custom/PassoAPasso.js"></script>

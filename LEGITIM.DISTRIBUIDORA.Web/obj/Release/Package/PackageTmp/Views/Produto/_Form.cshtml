@@ -1,0 +1,45 @@
+﻿@model  LEGITIM.DISTRIBUIDORA.Web.Models.Produto.ProdutoViewModel
+
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+<fieldset>
+    @Html.HiddenFor(model => model.Id)
+
+    <h3><b>Dados Cadastrais</b></h3>
+    <div class="row">
+        <section class="col col-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Descricao)
+                @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </section>
+        <section class="col col-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Codigo)
+                @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+            </div>
+        </section>
+    </div>
+
+    <h3><b>Unidade</b></h3>
+    <div class="row">
+        <section class="col col-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.TipoUnidade)
+                @Html.EditorFor(model => model.TipoUnidade, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TipoUnidade, "", new { @class = "text-danger" })
+            </div>
+        </section>
+        <section class="col col-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.DescricaoProduto)
+                @Html.EditorFor(model => model.DescricaoProduto, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DescricaoProduto, "", new { @class = "text-danger" })
+            </div>
+        </section>
+    </div>
+</fieldset>

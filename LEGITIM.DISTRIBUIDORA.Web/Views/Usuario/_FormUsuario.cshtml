@@ -1,0 +1,94 @@
+﻿@model LEGITIM.DISTRIBUIDORA.Web.Models.Usuarios.CadastraUsuarioViewModel
+
+@{
+    ViewBag.Title = "Cadastrar Usuário";
+    var Resultado = ViewBag.Resultado;
+    var Falha = ViewBag.Falha;
+    var Perfis = ViewBag.Perfis;
+}
+
+<fieldset>
+    @Html.HiddenFor(model => model.Id)
+
+
+    @if (Model.PathFile != null)
+    {
+        <div id="edit-line">
+            <div class="form-group">
+                <div class="form-group">
+                    <img style="height: 150px; width:150px" alt="image" class="img-circle" src="@Url.Content(Model.PathFile)" />
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <button type="button" class="btn btn-primary btn-lg" id="edit-foto"><span> <i class="fa fa-edit"></i> Editar Foto</span></button>
+
+            </div>
+        </div>
+        <br />
+
+
+    }
+    else
+    {
+        <div class="form-group">
+            @Html.LabelFor(model => model.File)<span style="color:red;"> *</span>
+            @Html.TextBoxFor(model => model.File, new { @class = "form-control formfield", type = "file" })
+            @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
+        </div>
+    }
+
+    <div class="form-group" style="display:none" id="up-load-photo">
+        @Html.LabelFor(model => model.File)<span style="color:red;"> *</span>
+        @Html.TextBoxFor(model => model.File, new { @class = "form-control formfield", type = "file" })
+        @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label" })<span style="color:red;"> *</span>
+        <br />
+        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control formfield" })
+        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group ">
+        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })<span style="color:red;"> *</span>
+        <br />
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control formfield" })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group ">
+        @Html.LabelFor(model => model.PerfilId, htmlAttributes: new { @class = "control-label" })<span style="color:red;"> *</span>
+        <br />
+        @Html.DropDownListFor(model => model.PerfilId, new SelectList(Perfis, "Id", "Descricao", Model.PerfilId), " ", new { @class = " form-control formfield", @id = "profileSelector" })
+        @Html.ValidationMessageFor(model => model.PerfilId, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group ">
+        @Html.LabelFor(model => model.Login, htmlAttributes: new { @class = "control-label" })<span style="color:red;"> *</span>
+        <br />
+        @Html.TextBoxFor(model => model.Login, new { @class = "form-control formfield" })
+        @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Senha)<span style="color:red;"> *</span>
+        @Html.TextBoxFor(model => model.Senha, new { @class = "form-control formfield", type = "password" })
+        @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ConfirmarSenha)<span style="color:red;"> *</span>
+        @Html.TextBoxFor(model => model.ConfirmarSenha, new { @class = "form-control formfield", type = "password" })
+        @Html.ValidationMessageFor(model => model.ConfirmarSenha, "", new { @class = "text-danger" })
+    </div>
+</fieldset>
+
+
+@*<script>
+        $(document).ready(
+            function () {
+                $("#edit-foto").click(function () {
+                    $("#edit-line").hide("slow");
+                    $("#up-load-photo").show("slow");
+                });
+            });
+    </script>*@

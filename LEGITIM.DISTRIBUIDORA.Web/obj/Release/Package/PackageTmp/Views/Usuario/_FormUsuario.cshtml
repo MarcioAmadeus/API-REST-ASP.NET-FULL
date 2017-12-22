@@ -1,0 +1,46 @@
+﻿@model LEGITIM.DISTRIBUIDORA.Web.Models.Usuarios.CadastraUsuarioViewModel
+
+@{
+    ViewBag.Title = "Cadastrar Usuário";
+    var Resultado = ViewBag.Resultado;
+    var Falha = ViewBag.Falha;
+    var Perfis = ViewBag.Perfis;
+}
+
+<fieldset>
+    @Html.HiddenFor(model => model.Id)
+    <div class="form-group ">
+        @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label" })<span style="color:red;"> *</span>
+        <br />
+        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control formfield" })
+        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group ">
+        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })<span style="color:red;"> *</span>
+        <br />
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control formfield" })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group ">
+        @Html.LabelFor(model => model.PerfilId, htmlAttributes: new { @class = "control-label" })<span style="color:red;"> *</span>
+        <br />
+        @Html.DropDownListFor(model => model.PerfilId, new SelectList(Perfis, "Id", "Descricao", Model.PerfilId), " ", new { @class = " form-control formfield", @id = "profileSelector" })
+        @Html.ValidationMessageFor(model => model.PerfilId, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group ">
+        @Html.LabelFor(model => model.Login, htmlAttributes: new { @class = "control-label" })<span style="color:red;"> *</span>
+        <br />
+        @Html.TextBoxFor(model => model.Login, new { @class = "form-control formfield" })
+        @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Senha)<span style="color:red;"> *</span>
+        @Html.TextBoxFor(model => model.Senha, new { @class = "form-control formfield", type = "password" })
+        @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ConfirmarSenha)<span style="color:red;"> *</span>
+        @Html.TextBoxFor(model => model.ConfirmarSenha, new { @class = "form-control formfield", type = "password" })
+        @Html.ValidationMessageFor(model => model.ConfirmarSenha, "", new { @class = "text-danger" })
+    </div>
+</fieldset>

@@ -1,0 +1,17 @@
+UpgradeLog*.html
+.vs/
+FGV.EBAPE.Web/obj/
+FGV.EBAPE.Web/bin/
+FGV.EBAPE.Web/App_Data/
+FGV.EBAPE.Web/Content/projetos/
+FGV.EBAPE.Web/Content/teses/
+FGV.EBAPE.Web/GESTAO_ACADEMICA.sql
+FGV.EBAPE.Utils/obj/
+FGV.EBAPE.Utils/bin/
+FGV.EBAPE.Domain/bin/
+FGV.EBAPE.Domain/obj/
+FGV.EBAPE.Data/obj/
+FGV.EBAPE.Data/bin/
+FGV.EBAPE.Web/docs/db/output
+packages/
+*.orig

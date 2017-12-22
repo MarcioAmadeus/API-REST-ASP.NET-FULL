@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Projetos\FGV-EBAPE\System\FGV.EBAPE.AcceptanceTests\bin\Debug\FGV.EBAPE.AcceptanceTests.dll" total="25" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2017-07-31" time="15:28:27">
+  <environment nunit-version="2.5.10.11092" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE" machine-name="DESKTOP-0FDD90H" user="Amadeus" user-domain="DESKTOP-0FDD90H" />
+  <culture-info current-culture="pt-BR" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Projetos\FGV-EBAPE\System\FGV.EBAPE.AcceptanceTests\bin\Debug\FGV.EBAPE.AcceptanceTests.dll" executed="True" result="Success" success="True" time="441.721" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="FGV" executed="True" result="Success" success="True" time="441.716" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="EBAPE" executed="True" result="Success" success="True" time="441.716" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="AcceptanceTests" executed="True" result="Success" success="True" time="441.716" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="AcceptenceTest" executed="True" result="Success" success="True" time="441.715" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="InicializacaoDoSistemaTest" executed="True" result="Success" success="True" time="441.715" asserts="0">
+                        <results>
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test0_mock" executed="True" result="Success" success="True" time="29.898" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test001_logar" executed="True" result="Success" success="True" time="4.977" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test02_ImportaAluno" executed="True" result="Success" success="True" time="6.548" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test03_ImportaProfessor" executed="True" result="Success" success="True" time="113.063" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test04_ImportaOrientacoes" executed="True" result="Success" success="True" time="21.379" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test041_Membro_Externo" executed="True" result="Success" success="True" time="61.851" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test042_Membro_Externo" executed="True" result="Success" success="True" time="1.791" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test05_cadastraLinhaDePesquisa" executed="True" result="Success" success="True" time="5.084" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test051_cadastraLinhaDePesquisa" executed="True" result="Success" success="True" time="2.988" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test052_cadastraLinhaDePesquisa" executed="True" result="Success" success="True" time="3.482" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test053_cadastraLinhaDePesquisa" executed="True" result="Success" success="True" time="2.557" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test054_cadastraLinhaDePesquisa" executed="True" result="Success" success="True" time="2.536" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test055_cadastraCadastrarKit" executed="True" result="Success" success="True" time="18.738" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test056_cadastraCadastrarKit" executed="True" result="Success" success="True" time="10.129" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test06_cadastrarUsuarios" executed="True" result="Success" success="True" time="5.355" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test061_cadastrarUsuarios" executed="True" result="Success" success="True" time="4.543" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test07_cadastraUsuarioCoordenador" executed="True" result="Success" success="True" time="8.330" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test08_cadastraEventoPreProjeto" executed="True" result="Success" success="True" time="8.439" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test09_cadastraEventoOrientacao" executed="True" result="Success" success="True" time="6.332" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test10_cadastraEventoPrtojeto" executed="True" result="Success" success="True" time="6.132" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test11_cadastraEventoTesePre" executed="True" result="Success" success="True" time="5.879" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test12_cadastraEventoBanca" executed="True" result="Success" success="True" time="6.060" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test13_cadastraEventoTeseFinal" executed="True" result="Success" success="True" time="6.126" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test14_listarEventos" executed="True" result="Success" success="True" time="0.462" asserts="0" />
+                          <test-case name="FGV.EBAPE.AcceptanceTests.AcceptenceTest.InicializacaoDoSistemaTest.Test17_editarTurma" executed="True" result="Success" success="True" time="92.363" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

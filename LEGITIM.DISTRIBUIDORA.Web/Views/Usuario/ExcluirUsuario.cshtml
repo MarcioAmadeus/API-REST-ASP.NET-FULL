@@ -1,0 +1,71 @@
+﻿@model LEGITIM.DISTRIBUIDORA.Web.Models.Usuarios.CadastraUsuarioViewModel
+@{
+    ViewBag.Title = "Excluir Usuário";
+    var Perfis = ViewBag.Perfis;
+}
+
+<div id="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <i class="fa fa-lg fa-fw fa-user"></i>
+                Excluir Usuário
+            </h1>
+        </div>
+    </div>
+
+
+
+    <section id="widget-grid">
+        <div class="row">
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="jarviswidget jarviswidget-color-blueDark" data-widget-editbutton="false" data-widget-deletebutton="false" id="wid-id-0">
+                    <header role="heading">
+                        <span class="widget-icon"> <i class="fa fa-user"></i> </span>
+                        <h2>Usuário</h2>
+                    </header>
+                    <div role="content">
+                        <div class="widget-body">
+                            @using (Html.BeginForm("ExcluirUsuario", "Usuario", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                <fieldset>
+                                    @Html.HiddenFor(model => model.Id)
+                                    <div class="form-group ">
+                                        @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label" })
+                                        <br />
+                                        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control formfield", disabled = "disabled" })
+                                    </div>
+                                    <div class="form-group ">
+                                        @Html.LabelFor(model => model.Login, htmlAttributes: new { @class = "control-label" })
+                                        <br />
+                                        @Html.TextBoxFor(model => model.Login, new { @class = "form-control formfield", disabled = "disabled" })
+                                    </div>
+                                    <div class="form-group ">
+                                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                                        <br />
+                                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control formfield", disabled = "disabled" })
+                                    </div>
+                                    <div class="form-group ">
+                                        @Html.LabelFor(model => model.PerfilDescricao, htmlAttributes: new { @class = "control-label" })
+                                        <br />
+                                        @Html.TextBoxFor(model => model.PerfilDescricao, new { @class = "form-control formfield", disabled = "disabled" })
+                                    </div>
+
+                                </fieldset>
+                                <div class="form-group">
+                                    <button class="btn btn-danger" id="btnAdicionar" type="submit">
+                                        <i class="fa fa-trash-o"></i>
+                                        Excluir
+                                    </button>
+                                    @Html.ActionLink("Cancelar", "ListaUsuario",
+                              null, new { @class = "btn btn-default" })
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>

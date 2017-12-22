@@ -1,0 +1,52 @@
+﻿@model  LEGITIM.DISTRIBUIDORA.Web.Models.Distribuidor.DistribuidorViewModel
+
+@*@section Breadcrumb {
+        <li> Inicio</li>
+        <li>Gerenciar Predios</li>
+        <li>Adicionar</li>
+    }*@
+
+<div id="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <i class="fa fa-lg fa-fw fa-truck"></i>
+                Editar Distribuidor
+            </h1>
+        </div>
+    </div>
+
+    @*@Html.Partial("_Mensagem")*@
+
+    <section id="widget-grid">
+        <div class="row">
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="jarviswidget jarviswidget-color-blueDark" data-widget-editbutton="false" data-widget-deletebutton="false" id="wid-id-0">
+                    <header role="heading">
+                        <span class="widget-icon"> <i class="fa fa-truck"></i> </span>
+                        <h2>Distribuidor</h2>
+                    </header>
+                    <div role="content">
+                        <div class="widget-body no-padding">
+                            @using (Html.BeginForm("EditarDistribuidor", "Fornecedor", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                <div class="smart-form">
+                                    @Html.Partial("_Form")
+
+                                    <footer>
+                                        @Html.ActionLink("Cancelar", "GerenciarDistribuidor",
+                              null, new { @class = "btn btn-default" })
+                                        <button class="btn btn-primary" type="submit">
+                                            <i class="fa fa-save"></i>
+                                            Salvar
+                                        </button>
+                                    </footer>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,16 @@
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\LEGITIM.DISTRIBUIDORA.Data.dll.config
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\LEGITIM.DISTRIBUIDORA.Data.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\LEGITIM.DISTRIBUIDORA.Data.pdb
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\LEGITIM.DISTRIBUIDORA.Domain.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\LEGITIM.DISTRIBUIDORA.Utils.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\NHibernate.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\SharpArch.Domain.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\SharpArch.NHibernate.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\LEGITIM.DISTRIBUIDORA.Domain.pdb
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\LEGITIM.DISTRIBUIDORA.Utils.pdb
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\NHibernate.xml
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\SharpArch.Domain.pdb
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\bin\Release\SharpArch.NHibernate.pdb
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\obj\Release\LEGITIM.DISTRIBUIDORA.Data.csprojResolveAssemblyReference.cache
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\obj\Release\LEGITIM.DISTRIBUIDORA.Data.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.Data\obj\Release\LEGITIM.DISTRIBUIDORA.Data.pdb

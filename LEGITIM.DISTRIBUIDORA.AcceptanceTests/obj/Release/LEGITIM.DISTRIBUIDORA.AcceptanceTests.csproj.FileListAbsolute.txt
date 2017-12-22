@@ -1,0 +1,15 @@
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\LEGITIM.DISTRIBUIDORA.AcceptanceTests.dll.config
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\LEGITIM.DISTRIBUIDORA.AcceptanceTests.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\LEGITIM.DISTRIBUIDORA.AcceptanceTests.pdb
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\Microsoft.Owin.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\nunit.framework.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\Owin.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\WebDriver.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\WebDriver.Support.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\Microsoft.Owin.xml
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\nunit.framework.xml
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\WebDriver.xml
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\bin\Release\WebDriver.Support.xml
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\obj\Release\LEGITIM.DISTRIBUIDORA.AcceptanceTests.csprojResolveAssemblyReference.cache
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\obj\Release\LEGITIM.DISTRIBUIDORA.AcceptanceTests.dll
+C:\Projetos\LEGITIM\System\LEGITIM.DISTRIBUIDORA.AcceptanceTests\obj\Release\LEGITIM.DISTRIBUIDORA.AcceptanceTests.pdb

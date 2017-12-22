@@ -1,0 +1,127 @@
+﻿@using LEGITIM.DISTRIBUIDORA.Web.Utils.Usuarios
+
+@{
+    var Resultado = ViewBag.ResultadoHome;
+}
+
+@if (@Resultado != null)
+{
+
+    <div class="alert alert-success">
+        <strong>@Resultado</strong>
+    </div>
+}
+<link rel="stylesheet" href="~/Content/css/dashboardIndicadores.css" />
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <i class="fa fa-lg fa-fw fa-dashboard"></i>
+                Dashboard - LEGITIM
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <a href="@Url.Action("Gerenciar", "Marca")">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="offer offer-info">
+                    <div class="shape">
+                        <div class="shape-text">
+                            <span class="fa fa-cubes"></span>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="lead">
+                            Marcas : <label class="label label-info">323</label>
+                        </h3>
+                        <p>
+                            Oranı:
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    60%
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="@Url.Action("ListaUsuario", "Usuario")">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="offer offer-radius offer-primary">
+                    <div class="shape">
+                        <div class="shape-text">
+                            <span class="fa fa-user"></span>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="lead">
+                            Usuários : <label class="label label-primary"> 323</label>
+                        </h3>
+                        <p>
+                            Comparativo :
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    60%
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="@Url.Action("Gerenciar", "Aparelho")">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="offer offer-success">
+                    <div class="shape">
+                        <div class="shape-text">
+                            <span class="fa fa-th"></span>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="lead">
+                            Aparelhos : <label class="label label-success"> 323</label>
+                        </h3>
+                        <p>
+                            Ortalama Oranı:
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    60%
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="offer offer-danger">
+                <div class="shape">
+                    <div class="shape-text">
+                        <span class="glyphicon  glyphicon-home"></span>
+                    </div>
+                </div>
+                <div class="offer-content">
+                    <h3 class="lead">
+                        İnfo : <label class="label label-danger"> 323</label>
+                    </h3>
+                    <p>
+                        Kullanma Oranı:
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                60%
+                            </div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
