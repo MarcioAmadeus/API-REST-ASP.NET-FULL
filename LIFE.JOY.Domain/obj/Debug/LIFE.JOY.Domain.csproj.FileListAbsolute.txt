@@ -1,0 +1,15 @@
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\LIFE.JOY.Domain.dll.config
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\LIFE.JOY.Domain.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\LIFE.JOY.Domain.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\LIFE.JOY.Utils.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\SharpArch.Domain.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\NHibernate.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\SharpArch.NHibernate.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\LIFE.JOY.Utils.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\SharpArch.Domain.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\NHibernate.xml
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\bin\Debug\SharpArch.NHibernate.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\obj\Debug\LIFE.JOY.Domain.csprojResolveAssemblyReference.cache
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\obj\Debug\LIFE.JOY.Domain.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Domain\obj\Debug\LIFE.JOY.Domain.pdb

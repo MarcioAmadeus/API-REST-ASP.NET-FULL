@@ -1,0 +1,12 @@
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\bin\Debug\LIFE.JOY.Utils.dll.config
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\bin\Debug\LIFE.JOY.Utils.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\bin\Debug\LIFE.JOY.Utils.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\bin\Debug\NHibernate.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\bin\Debug\SharpArch.Domain.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\bin\Debug\SharpArch.NHibernate.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\bin\Debug\NHibernate.xml
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\bin\Debug\SharpArch.Domain.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\bin\Debug\SharpArch.NHibernate.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\obj\Debug\LIFE.JOY.Utils.csprojResolveAssemblyReference.cache
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\obj\Debug\LIFE.JOY.Utils.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Utils\obj\Debug\LIFE.JOY.Utils.pdb

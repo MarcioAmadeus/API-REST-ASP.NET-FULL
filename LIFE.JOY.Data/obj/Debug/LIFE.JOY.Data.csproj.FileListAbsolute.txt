@@ -1,0 +1,16 @@
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\FGV.EBAPE.Data.dll.config
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\FGV.EBAPE.Data.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\FGV.EBAPE.Data.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\LIFE.JOY.Domain.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\LIFE.JOY.Utils.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\NHibernate.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\SharpArch.Domain.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\SharpArch.NHibernate.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\LIFE.JOY.Domain.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\LIFE.JOY.Utils.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\NHibernate.xml
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\SharpArch.Domain.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\bin\Debug\SharpArch.NHibernate.pdb
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\obj\Debug\LIFE.JOY.Data.csprojResolveAssemblyReference.cache
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\obj\Debug\FGV.EBAPE.Data.dll
+C:\Projetos\API-LIFE-JOY\CODE\LIFE.JOY.Data\obj\Debug\FGV.EBAPE.Data.pdb
