@@ -33,14 +33,14 @@ namespace LIFE.JOY.Web
 
             var localMapping = MappingHelper.GetIdentityMappings(allEntities);
             Configuration config = NHibernateSessionHelper.Init(storage, null, null, null, localMapping);
-            BuildSchema(config, "gestao_academica.sql");
+            BuildSchema(config, "life_joy.sql");
         }
 
         private static void BuildSchema(Configuration config, string fileName)
         {
             var path = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, fileName);
             new SchemaExport(config).SetOutputFile(path).SetDelimiter(";")
-                .Create(true, true); /* DROP AND CREATE SCHEMA */
+                .Create(false, false); /* DROP AND CREATE SCHEMA */
         }
     }
 }

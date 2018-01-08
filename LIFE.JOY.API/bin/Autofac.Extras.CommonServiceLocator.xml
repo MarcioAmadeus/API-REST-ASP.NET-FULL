@@ -17,14 +17,14 @@
         </member>
         <member name="M:Autofac.Extras.CommonServiceLocator.AutofacServiceLocator.#ctor(Autofac.IComponentContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:Autofac.Extras.CommonServiceLocator.AutofacServiceLocator"/> class.
+            Initializes a new instance of the <see cref="T:Autofac.Extras.CommonServiceLocator.AutofacServiceLocator" /> class.
             </summary>
             <param name="container">
             The <see cref="T:Autofac.IComponentContext"/> from which services
             should be located.
             </param>
             <exception cref="T:System.ArgumentNullException">
-            Thrown if <paramref name="container"/> is <see langword="null"/>.
+            Thrown if <paramref name="container" /> is <see langword="null" />.
             </exception>
         </member>
         <member name="M:Autofac.Extras.CommonServiceLocator.AutofacServiceLocator.DoGetInstance(System.Type,System.String)">
@@ -32,10 +32,10 @@
             Resolves the requested service instance.
             </summary>
             <param name="serviceType">Type of instance requested.</param>
-            <param name="key">Name of registered service you want. May be <see langword="null"/>.</param>
+            <param name="key">Name of registered service you want. May be <see langword="null" />.</param>
             <returns>The requested service instance.</returns>
             <exception cref="T:System.ArgumentNullException">
-            Thrown if <paramref name="serviceType"/> is <see langword="null"/>.
+            Thrown if <paramref name="serviceType" /> is <see langword="null" />.
             </exception>
         </member>
         <member name="M:Autofac.Extras.CommonServiceLocator.AutofacServiceLocator.DoGetAllInstances(System.Type)">
@@ -45,7 +45,7 @@
             <param name="serviceType">Type of instance requested.</param>
             <returns>Sequence of service instance objects.</returns>
             <exception cref="T:System.ArgumentNullException">
-            Thrown if <paramref name="serviceType"/> is <see langword="null"/>.
+            Thrown if <paramref name="serviceType" /> is <see langword="null" />.
             </exception>
         </member>
     </members>
