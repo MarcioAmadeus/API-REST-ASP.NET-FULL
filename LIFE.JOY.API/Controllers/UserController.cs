@@ -12,6 +12,8 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Net.Http.Formatting;
 using LIFE.JOY.API.Models.User;
+using LIFE.JOY.Utils.SoftDelete;
+using SharpArch.Domain.PersistenceSupport;
 
 namespace LIFE.JOY.API.Controllers
 {
@@ -19,7 +21,7 @@ namespace LIFE.JOY.API.Controllers
     {
 
 
-       
+
         public HttpResponseMessage Get(int id)
         {
             var test = 0;
@@ -53,14 +55,21 @@ namespace LIFE.JOY.API.Controllers
             return response;
         }
 
-        //[Route("api/carrinho/{idCarrinho}/produto/{idProduto}")]
-        //public HttpResponseMessage Delete([FromUri] int idCarrinho, [FromUri] int idProduto)
-        //{
-        //    var dao = new CarrinhoDAO();
-        //    var carrinho = dao.Busca(idCarrinho);
-        //    carrinho.Remove(idProduto);
-        //    return Request.CreateResponse(HttpStatusCode.OK);
-        //}
+        [Route("api/user/Delete/{id}")]
+        public HttpResponseMessage Delete([FromUri] int id)
+        {
+
+            var dao = NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey)
+                                           .Query<Usuario>()
+                                           .First(x => x.Id == id);
+
+            
+            NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).Delete(dao);
+            NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).Flush();
+          
+
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
 
         //[Route("api/carrinho/{idCarrinho}/produto/{idProduto}/quantidade")]
         //public HttpResponseMessage Put([FromBody]Produto produto, [FromUri] int idCarrinho, [FromUri] int idProduto)
