@@ -1,4 +1,5 @@
 ﻿using LIFE.JOY.Domain.Models.Basic;
+using NHibernate;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 
@@ -50,12 +51,49 @@ namespace LIFE.JOY.Data.Mappings.Basic
                 });
             });
 
-            Property(x => x.Email, m =>
+            Property(x => x.Source, m =>
             {
                 m.Column(c =>
                 {
-                    c.Name("EMAIL");
+                    c.Name("SOURCE");
                     c.NotNullable(true);
+                });
+            });
+
+            Property(x => x.Gender, m =>
+            {
+                m.Column(c =>
+                {
+                    c.Name("GENDER");
+                    c.NotNullable(true);
+                });
+            });
+
+            Property(x => x.Nickname, m =>
+            {
+                m.Column(c =>
+                {
+                    c.Name("NICK_NAME");
+                    c.NotNullable(false);
+                });
+            });
+
+            Property(x => x.Birth, m =>
+            {
+                m.Type(NHibernateUtil.Date);
+                m.Column(c =>
+                {
+                    c.Name("BIRTH");
+                    c.NotNullable(false);
+                });
+            });
+
+            Property(x => x.Bio, m =>
+            {
+                m.Column(c =>
+                {
+                    c.Name("BIO");
+                    c.NotNullable(false);
                 });
             });
 

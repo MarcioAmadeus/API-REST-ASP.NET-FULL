@@ -10,6 +10,8 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Net.Http.Formatting;
+using LIFE.JOY.API.Models.User;
 
 namespace LIFE.JOY.API.Controllers
 {
@@ -17,33 +19,62 @@ namespace LIFE.JOY.API.Controllers
     {
 
 
-        public void test()
-        {
-            var test = 0;
-            if(test == 0)
-            {
-                var ok = "ok";
-            }
-        }
+       
         public HttpResponseMessage Get(int id)
         {
             var test = 0;
             try
             {
                 var dao = NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey)
-                                           .Query<Acao>()
+                                           .Query<Usuario>()
                                            .First(x => x.Id == id);
-                var user = dao;
-                var userAsXML = ToXml(user);
-                return Request.CreateResponse(HttpStatusCode.OK, userAsXML);
+                var JsonModel = UserJsonModel.ConverterDominio(dao);
+                //var userAsXML = ToXml(user);
+                return Request.CreateResponse(HttpStatusCode.OK, JsonModel, JsonMediaTypeFormatter.DefaultMediaType);
             }
             catch (KeyNotFoundException)
             {
                 var mensagem = string.Format("O Usuario {0} não foi encontrado", id);
                 var error = new HttpError(mensagem);
-                return Request.CreateResponse(HttpStatusCode.NotFound, error);
+                return Request.CreateResponse(HttpStatusCode.NotFound, error, JsonMediaTypeFormatter.DefaultMediaType);
             }
         }
+
+        public HttpResponseMessage Post([FromBody] UserJsonModel UserJson)
+        {
+            UserJsonModel dao = new UserJsonModel();
+            var usuario = UserJson.add();
+            NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).SaveOrUpdate(usuario);
+
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created);
+            string location = Url.Link("DefaultApi", new { controller = "User", id = usuario.Id });
+            response.Headers.Location = new Uri(location);
+
+            return response;
+        }
+
+        //[Route("api/carrinho/{idCarrinho}/produto/{idProduto}")]
+        //public HttpResponseMessage Delete([FromUri] int idCarrinho, [FromUri] int idProduto)
+        //{
+        //    var dao = new CarrinhoDAO();
+        //    var carrinho = dao.Busca(idCarrinho);
+        //    carrinho.Remove(idProduto);
+        //    return Request.CreateResponse(HttpStatusCode.OK);
+        //}
+
+        //[Route("api/carrinho/{idCarrinho}/produto/{idProduto}/quantidade")]
+        //public HttpResponseMessage Put([FromBody]Produto produto, [FromUri] int idCarrinho, [FromUri] int idProduto)
+        //{
+        //    var dao = new CarrinhoDAO();
+        //    var carrinho = dao.Busca(idCarrinho);
+
+        //    carrinho.TrocaQuantidade(produto);
+
+        //    return Request.CreateResponse(HttpStatusCode.OK);
+        //}
+
+
+
         public string ToXml(Acao user)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(Acao));

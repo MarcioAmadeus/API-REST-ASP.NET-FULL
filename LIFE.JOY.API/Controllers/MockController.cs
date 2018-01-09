@@ -217,13 +217,35 @@ namespace FGV.EBAPE.Web.Controllers
             {
                 var Usuario2 = new Usuario()
                 {
-                    Nome = "Admnistrador",
-                    Login = "admsistema",
-                    Email = "marcioamamadeus@gmail.com",
+                    Nome = "Felipe",
+                    Login = "felipe@gmail.com",
+                    Source = "google",
+                    PhotoURL = "http://lorempixel.com/640/480",
+                    Fullname = "Marcio Amadeus",
+                    Gender = "Male",
+                    Nickname = "Love God",
+                    Birth = DateTime.Now.AddYears(-30),
                     Senha = Encryptor.MD5Hash("123"),
+                    Bio = "Ele é discreto e cultua bons livros e ama os animais, tá ligado eu sou o bicho",
                     Perfil = PerfilAdmnistradorSistema
                 };
                 NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).SaveOrUpdate(Usuario2);
+
+                var Usuario3 = new Usuario()
+                {
+                    Nome = "Amadeus",
+                    Login = "marcioamamadeus@gmail.com",
+                    Source = "google",
+                    PhotoURL = "http://lorempixel.com/640/480",
+                    Fullname = "Marcio Amadeus",
+                    Gender = "Male",
+                    Nickname = "Love God",
+                    Birth = DateTime.Now.AddYears(-30),
+                    Senha = Encryptor.MD5Hash("123"),
+                    Bio = "Ele é discreto e cultua bons livros e ama os animais, tá ligado eu sou o bicho",
+                    Perfil = PerfilAdmnistradorSistema
+                };
+                NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).SaveOrUpdate(Usuario3);
             }
             #endregion
         }
