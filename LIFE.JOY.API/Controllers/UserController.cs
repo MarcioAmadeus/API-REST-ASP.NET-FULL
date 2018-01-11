@@ -63,24 +63,33 @@ namespace LIFE.JOY.API.Controllers
                                            .Query<Usuario>()
                                            .First(x => x.Id == id);
 
-            
-            NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).Delete(dao);
+            dao.Ativo = JOY.Utils.Enums.eSimNao.N;
+            NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).SaveOrUpdate(dao);
             NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).Flush();
           
 
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-     
+        [Route("api/user/Put/{id}")]
         public HttpResponseMessage Put([FromBody]UserJsonModel UserJson, [FromUri] int id)
         {
-
+            
             var usuario = UserJson.add(id);
             NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).SaveOrUpdate(usuario);
             NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).Flush();
-
             return Request.CreateResponse(HttpStatusCode.OK);
         }
+        //public HttpResponseMessage Put([FromBody]UserJsonModel UserJson, [FromUri] int id)
+        //{
+
+
+        //    var usuario = UserJson.add(id);
+        //    NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).SaveOrUpdate(usuario);
+        //    NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).Flush();
+
+        //    return Request.CreateResponse(HttpStatusCode.OK);
+        //}
 
 
 

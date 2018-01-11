@@ -63,7 +63,10 @@ namespace LIFE.JOY.API.Models.User
 
             if(id != 0)
             {
-                domain.Id.Equals(id);
+                domain = NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey)
+                                               .Query<Usuario>()
+                                               .FirstOrDefault(x => x.Id == id);
+                
             }
             domain.Login = this.Login;
             domain.Nome = this.Nome;
