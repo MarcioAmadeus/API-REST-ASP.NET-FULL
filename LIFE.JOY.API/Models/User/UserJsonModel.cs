@@ -57,10 +57,14 @@ namespace LIFE.JOY.API.Models.User
             return model;
         }
 
-        public Usuario add()
+        public Usuario add(int id = 0)
         {
             var domain = new Usuario();
 
+            if(id != 0)
+            {
+                domain.Id.Equals(id);
+            }
             domain.Login = this.Login;
             domain.Nome = this.Nome;
             domain.Source = this.Source;

@@ -71,16 +71,16 @@ namespace LIFE.JOY.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        //[Route("api/carrinho/{idCarrinho}/produto/{idProduto}/quantidade")]
-        //public HttpResponseMessage Put([FromBody]Produto produto, [FromUri] int idCarrinho, [FromUri] int idProduto)
-        //{
-        //    var dao = new CarrinhoDAO();
-        //    var carrinho = dao.Busca(idCarrinho);
+     
+        public HttpResponseMessage Put([FromBody]UserJsonModel UserJson, [FromUri] int id)
+        {
 
-        //    carrinho.TrocaQuantidade(produto);
+            var usuario = UserJson.add(id);
+            NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).SaveOrUpdate(usuario);
+            NHibernateSession.CurrentFor(NHibernateSession.DefaultFactoryKey).Flush();
 
-        //    return Request.CreateResponse(HttpStatusCode.OK);
-        //}
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
 
 
 
